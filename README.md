@@ -28,20 +28,20 @@ git clone https://github.com/grupo-ddm/teste-laravel.git
 cd teste-laravel
 ```
 
-### 2. Mude para a branch do teste 
+### 2. Mude para a branch do teste
 
 ```bash
 git checkout francisco_costa_99984289317
 ```
 
-### 2. Instalar dependências
+### 3. Instalar dependências
 
 ```bash
 composer install
 npm install && npm run build
 ```
 
-### 3. Configurar o `.env`
+### 4. Configurar o `.env`
 
 Copie o arquivo de exemplo e configure:
 
@@ -67,12 +67,6 @@ MAIL_FROM_ADDRESS=seu_email@dominio.com
 MAIL_FROM_NAME="Sistema de Vendas"
 ```
 
-### 4. Rodar as migrations e seeders
-
-```bash
-php artisan migrate --seed
-```
-
 ### 5. Rodar o servidor
 
 ```bash
@@ -80,6 +74,14 @@ php artisan serve
 ```
 
 Acesse: [http://127.0.0.1:8000](http://127.0.0.1:8000)
+
+### 5. Rodar o npm
+
+```bash
+npm run dev
+```
+
+Acesse: [http://localhost:5173/](http://localhost:5173/)
 
 ## Criar o primeiro usuário via CLI (Admin)
 
@@ -116,27 +118,10 @@ Após isso, criará o usuário com a role `admin`, desde que o e-mail não estej
 
 As principais tabelas utilizadas são:
 
--   `clientes` (id, nome, email, etc.)
--   `produtos` (id, nome, preço, estoque, etc.)
--   `vendas` (id, cliente_id, user_id, total, data)
--   `users` (id, nome, email, senha, role \[admin|vendedor])
--   `venda_produto` (pivot com venda_id, produto_id, quantidade)
+-   `clientes` (id, nome, email, telefone, created_at, updated_at)
+-   `produtos` (id, nome, preco, estoque, descricao, created_at, updated_at, imagem.)
+-   `vendas` (id, cliente_id, total, data, created_at, updated_at, user_id)
+-   `users` (id, name, email, email_verified_at, password, role \[admin|vendedor])
+-   `produto_venda` (pivot com venda_id, produto_id, quantidade, preco_unitario, created_at,updated_at )
+-   `logs` (id, user_id, action, model_id, descriptio, ip, created_at, updated_at )
 
-## Finalizando o teste
-
-Crie um novo branch com seu nome e telefone:
-
-```bash
-git checkout -b fulano_da_silva_21999999999
-git push origin fulano_da_silva_21999999999
-```
-
-Envie um e-mail para **[ti@ddm.adv.br](mailto:ti@ddm.adv.br)** com assunto:
-
-```
-Teste finalizado - Fulano da Silva
-```
-
----
-
-Este projeto foi desenvolvido com foco em organização, boas práticas e funcionalidades claras. Sinta-se à vontade para sugerir melhorias ou adaptar conforme necessário.
