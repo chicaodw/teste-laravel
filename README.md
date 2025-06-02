@@ -75,7 +75,7 @@ php artisan serve
 
 Acesse: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
-### 5. Rodar o npm
+### 6. Rodar o npm
 
 ```bash
 npm run dev
@@ -124,4 +124,3 @@ As principais tabelas utilizadas são:
 -   `users` (id, name, email, email_verified_at, password, role \[admin|vendedor])
 -   `produto_venda` (pivot com venda_id, produto_id, quantidade, preco_unitario, created_at,updated_at )
 -   `logs` (id, user_id, action, model_id, descriptio, ip, created_at, updated_at )
-
