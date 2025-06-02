@@ -75,7 +75,7 @@ php artisan serve
 
 Acesse: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
-### 5. Rodar o npm
+### 6. Rodar o npm
 
 ```bash
 npm run dev
@@ -125,3 +125,23 @@ As principais tabelas utilizadas são:
 -   `produto_venda` (pivot com venda_id, produto_id, quantidade, preco_unitario, created_at,updated_at )
 -   `logs` (id, user_id, action, model_id, descriptio, ip, created_at, updated_at )
 
+Imagens do Sistema
+
+Abaixo, algumas capturas de tela ilustrando as funcionalidades do sistema:
+
+Tela de Login
+![Tela de Login](public/md/lo.png)
+
+Dashboard - Admin
+![Tela Dashboar](public/md/d1.png)
+![Tela Dashboar](public/md/d.png)
+
+Produtos
+![Tela cadastro de produto](public/md/p.png)
+![Tela lista de produtos](public/md/p1.png)
+
+Vendas
+![Tela Vendas](public/md/v.png)
+
+Logs de Atividade
+![Logs](public/md/l.png)
